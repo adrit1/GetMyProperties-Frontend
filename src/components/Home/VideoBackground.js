@@ -6,7 +6,7 @@ const VideoBackground = () => {
         <div className={styles.container}>
             {/* Video Background */}
             <video className={styles.videoBackground} autoPlay loop muted>
-                <source src="../../../images/video.mp4" type="video/mp4" />
+                <source src="https://youtu.be/yAxIo84SE5w" type="video/mp4" />
 
             </video>
 
