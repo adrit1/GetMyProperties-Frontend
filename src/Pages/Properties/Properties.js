@@ -5,7 +5,7 @@ import { useSelector, useDispatch } from 'react-redux';
 import apiRequest from '../../hook/useApi';
 import { useError } from '../../ErrorContext';
 import Loading from '../../components/UI/Loading/Loading';
-import useUserApiCalls from '../../Api/useUserApiCalls';
+import useUserApiCalls from '../../Api/useUserApiCalls.js';
 import { setPage } from '../../store/propertyActions';
 import AllProperties from '../../components/AllProperties/AllProperties.js';
 import PropertyCard from '../../components/PropertyCard/PropertyCard.js';
