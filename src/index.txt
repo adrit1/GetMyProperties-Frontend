@@ -1,0 +1,30 @@
+import apiRequest from "../../hook/useApi";
+
+const [apiCallStatus, setApiCallStatus] = useState('');
+const [loading, setLoading] = useState(false);
+
+
+
+try {
+    await apiRequest({
+        requestType: 'get',
+        url: `${process.env.REACT_APP_URI}properties`,
+        setLoading: setLoading,
+        onSuccess: (data) => {
+            setApiCallStatus("Properties fetched successfully");
+            console.log(data)
+            setProperties(data)
+
+        },
+        onError: (error) => handleError(error)
+    });
+} catch (error) {
+    setApiCallStatus('Error getting properties.');
+}
+
+
+
+if (loading) return <p>Loading...</p>;
+
+
+{(apiCallStatus) && <p>Status: {apiCallStatus}</p>}

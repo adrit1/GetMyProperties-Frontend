@@ -1,0 +1,78 @@
+/* Loader.module.css */
+.loading {
+    margin: 0;
+    text-align: center;
+}
+
+.pl {
+    display: block;
+    width: min(60%, 90px);
+    height: min(60%, 90px);
+    margin: auto;
+    position: relative;
+
+
+}
+
+.pl__ringRotate {
+    /* animation: rotate 2s infinite linear; */
+}
+
+.pl__ringStroke {
+    stroke-dasharray: 452.39;
+    /* Total length of the circle's circumference */
+    stroke-dashoffset: 452.39;
+    /* Initially hide the circle */
+    animation: dash 2s ease-in-out infinite;
+}
+
+.pl__tick {
+    animation: tick 0.5s infinite linear;
+}
+
+.pl__arrows {
+    animation: arrows 1.5s infinite ease-in-out;
+}
+
+@keyframes rotate {
+    0% {
+        transform: rotate(0deg);
+    }
+
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+@keyframes dash {
+    0% {
+        stroke-dashoffset: 452.39;
+    }
+
+    100% {
+        stroke-dashoffset: 0;
+    }
+}
+
+@keyframes tick {
+    0% {
+        stroke-dashoffset: 12;
+    }
+
+    100% {
+        stroke-dashoffset: 0;
+    }
+}
+
+@keyframes arrows {
+
+    0%,
+    50%,
+    100% {
+        opacity: 0;
+    }
+
+    25% {
+        opacity: 1;
+    }
+}

@@ -1,0 +1,9 @@
+import { useErrorHandler } from '../../hook/useErrorHandler';
+import withErrorHandling from '../../hook/WrapperComponent';
+
+const {handleError} = useErrorHandler();
+
+onError: (error) => handleError(error)
+
+
+withErrorHandling(

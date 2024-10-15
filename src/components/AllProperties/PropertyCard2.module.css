@@ -1,0 +1,51 @@
+.card {
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    position: relative;
+    width: 100%;
+    height: 220px;
+}
+
+.imageBackground {
+    width: 100%;
+    height: 100%;
+    background-size: cover;
+    background-position: center;
+    position: relative;
+}
+
+.content {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: rgba(0, 0, 0, 0.3);
+    /* Dark overlay */
+    padding: 16px;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+}
+
+.title {
+    font-size: 1.5rem;
+    font-weight: 400;
+    color: white;
+}
+
+.marketer,
+.apartmentType,
+.location,
+.priceRange {
+    font-size: 0.85rem;
+    color: white
+}
+
+.priceRange {
+    font-size: 1rem;
+    font-weight: bold;
+    color: #fff;
+    text-align: right;
+}

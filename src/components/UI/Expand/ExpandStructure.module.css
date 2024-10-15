@@ -1,0 +1,34 @@
+.expandStructure {
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    padding: 10px;
+    margin-bottom: 10px;
+    width: 80vw;
+}
+
+.header {
+    display: flex;
+    justify-content: space-between;
+    /* align-items: center; */
+    cursor: pointer;
+    width: 100% !important;
+}
+
+.title {
+    margin: 0;
+    font-weight: bold;
+    color: #333;
+}
+
+.toggleButton {
+    background-color: transparent;
+    border: none;
+    font-size: 18px;
+    cursor: pointer;
+}
+
+.content {
+    margin-top: 10px;
+    /* padding-left: 15px; */
+    color: #555;
+}

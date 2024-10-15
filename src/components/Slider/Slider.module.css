@@ -1,0 +1,19 @@
+.imageSlider {
+    margin-bottom: 20px;
+
+}
+
+.sliderImage {
+    width: 100%;
+    /* border-radius: 10px; */
+    object-fit: cover;
+    height: 400px;
+    /* transition: transform 500ms ease; */
+    transform: scale(1);
+}
+
+.zoomOut {
+    transition: transform 2500ms ease;
+    transform: scale(1.15);
+    /* Zoom out when the slide is active */
+}

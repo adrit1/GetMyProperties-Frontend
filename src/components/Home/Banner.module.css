@@ -1,0 +1,148 @@
+.container {
+    position: relative;
+}
+
+.heroSection {
+    position: absolute;
+    top: 0;
+    left: 0;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: 90vh;
+    background-size: cover;
+    padding: 0 50px;
+    background-color: "#ccc9";
+    z-index: 999;
+}
+
+.leftSection {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    color: white;
+}
+
+.heading {
+    font-size: 3.5rem;
+    font-weight: bold;
+    margin-bottom: 20px;
+}
+
+.highlight {
+    color: #ffc107;
+}
+
+.searchBox {
+    display: flex;
+    gap: 10px;
+    margin-top: 20px;
+}
+
+.searchBox input {
+    padding: 10px;
+    width: 300px;
+    border-radius: 5px;
+    border: none;
+}
+
+.searchBox button {
+    padding: 10px 20px;
+    background-color: #c39c6d;
+    border: none;
+    color: white;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.formSection {
+    flex: 1;
+    display: flex;
+    justify-content: flex-end;
+}
+
+.overlayForm {
+    background: rgba(255, 255, 255, 0.8);
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    width: 300px;
+}
+
+.overlayForm input {
+    display: block;
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 15px;
+    border-radius: 5px;
+    border: 1px solid #ddd;
+}
+
+.radioGroup {
+    margin-bottom: 15px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.radioGroup label {
+    display: flex;
+    align-items: center;
+}
+
+.radioGroup input {
+    margin-right: 5px;
+}
+
+.submitButton {
+    width: 100%;
+    padding: 10px;
+    background-color: #c39c6d;
+    border: none;
+    color: white;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+@media (max-width: 768px) {
+    .heroSection {
+        flex-direction: column;
+        text-align: center;
+        padding: 20px;
+        margin-top: 30vh;
+        margin-left: 10vw;
+    }
+
+    .formSection {
+        display: 'none';
+        opacity: 0;
+    }
+
+    .searchBox {
+        justify-content: center;
+    }
+
+    .overlayForm {
+        width: 100%;
+    }
+
+    .heading {
+        font-size: 1.5rem;
+    }
+}
+
+@media (max-width: 472px) {
+    .heroSection {
+        flex-direction: column;
+        text-align: center;
+        padding: 0px;
+        margin-top: 30vh;
+        margin-left: 10vw;
+
+    }
+
+    .searchBox {
+        width: 180px;
+        margin-left: 9vw;
+    }
+}

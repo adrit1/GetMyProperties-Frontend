@@ -1,0 +1,156 @@
+/* src/components/AuthPage/AuthPage.module.css */
+
+.container {
+    width: 30%;
+    margin: auto;
+    height: auto;
+    border-radius: 10px;
+    box-shadow: 0 4px 9px rgba(0, 0, 0, 0.4);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 2% 3%;
+    margin-top: 5%;
+    background-color: #fff;
+    z-index: 1;
+}
+
+h2 {
+    margin-bottom: 20px;
+    color: #333;
+}
+
+.tab {
+    position: relative;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    border: 1px solid #ccc;
+    border-radius: 10px;
+    overflow: hidden;
+    margin-bottom: 30px;
+    background-color: #f9f9f9;
+
+}
+
+.btn {
+    flex: 1;
+    padding: 14px;
+    border: none;
+    background: none;
+    color: black;
+    font-size: 16px;
+    cursor: pointer;
+    transition: color 0.3s ease, transform 0.3s ease;
+    position: relative;
+    z-index: 1;
+
+}
+
+.btn:hover {
+    background-color: rgba(0, 0, 0, 0.05);
+    /* transform: scale(1.05); */
+}
+
+.active {
+    color: white;
+
+}
+
+.slider {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 50%;
+    height: 100%;
+    background: linear-gradient(to right, #003366, #004080, #0059b3, #0073e6);
+    transition: transform 0.5s ease;
+    z-index: 0;
+}
+
+.mainContainer {
+    width: 200%;
+    display: flex;
+    transition: transform 0.5s ease;
+    z-index: 1;
+}
+
+.left,
+.right {
+    width: 50%;
+    padding: 20px;
+    box-sizing: border-box;
+    z-index: 0;
+}
+
+.left {
+    background-color: #e6f2ff;
+}
+
+.right {
+    background-color: #e6f2ff;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+}
+
+form h3 {
+    margin-bottom: 15px;
+    color: #333;
+}
+
+form input {
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+form button {
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    background-color: #0073e6;
+    color: white;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+form button:hover {
+    background-color: #005bb5;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .container {
+        width: 80%;
+        padding: 10% 5%;
+    }
+
+    .tab {
+        width: 50%;
+    }
+
+    .btn {
+        font-size: 7px;
+        padding: 6px;
+    }
+
+    .mainContainer {
+        width: 140%;
+    }
+
+    .left,
+    .right {
+        padding: 15px;
+    }
+}
+
+/* Focus Styles for Accessibility */
+.btn:focus {
+    outline: 2px solid #005bb5;
+}

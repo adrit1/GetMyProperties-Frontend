@@ -1,0 +1,14 @@
+.container {
+    margin-bottom: 15px;
+}
+
+.label {
+    opacity: .75;
+    padding-right: 5px;
+
+}
+
+.data {
+    opacity: 1.25;
+
+}
