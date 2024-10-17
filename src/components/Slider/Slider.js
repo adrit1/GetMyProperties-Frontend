@@ -19,6 +19,17 @@ const Slider = ({ image_files, isBanner = false }) => {
     const handleSlideChange = (swiper) => {
         setActiveSlide(swiper.activeIndex);
     }
+
+    const getHeight = () => {
+        const width = window.innerWidth;
+        if (isBanner) {
+            if (width <= 768) return "50vh"; // Mobile
+            if (width <= 1024) return "60vh"; // Tablets
+            return "90vh"; // Desktop
+        } else {
+            return "400px";
+        }
+    };
     return (
 
         <Box className={styles.imageSlider}>
@@ -32,12 +43,13 @@ const Slider = ({ image_files, isBanner = false }) => {
                 pagination={{
                     clickable: true,
                 }}
-                navigation={true}
+                navigation={false}
                 modules={[Autoplay, Pagination, Navigation, EffectFade]}
                 className="mySwiper"
                 onSlideChange={handleSlideChange}
                 effect="fade" // Apply fade effect
                 fadeEffect={{ crossFade: true }}
+            // allowSlidePrev={false}
 
             >
                 {image_files.map((img, index) => (
@@ -49,7 +61,7 @@ const Slider = ({ image_files, isBanner = false }) => {
 
                             }
 
-                            style={{ height: isBanner === true ? "90vh" : "400px" }}
+                            style={{ height: getHeight() }}
                         />
                     </SwiperSlide>
                 ))}

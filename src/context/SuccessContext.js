@@ -1,5 +1,5 @@
 import React, { createContext, useContext, useState } from 'react';
-import SuccessPage from '../UI/Modal/Success/SuccessPage';
+import SuccessPage from '../components/UI/Modal/Success/SuccessPage';
 
 const SuccessContext = createContext();
 

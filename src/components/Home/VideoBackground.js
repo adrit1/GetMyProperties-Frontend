@@ -3,12 +3,21 @@ import styles from './VideoBackground.module.css'; // Importing the modular CSS
 
 const VideoBackground = () => {
     return (
-        <div className={styles.container}>
+        <div className={styles.container}
+        >
             {/* Video Background */}
-            <video className={styles.videoBackground} autoPlay loop muted>
-                <source src="https://youtu.be/yAxIo84SE5w" type="video/mp4" />
+            <iframe
+                className={styles.videoBackground}
+                width="100%"
+                height="auto"
+                src="https://www.youtube.com/embed/yAxIo84SE5w?autoplay=1&loop=1&mute=1&playlist=yAxIo84SE5w"
+                frameBorder="0"
+                allow="autoplay; encrypted-media"
+                allowFullScreen
+                title='one'
+                pointerEvents="none"
+            ></iframe>
 
-            </video>
 
             {/* Overlay Content */}
             <div className={styles.overlay}>

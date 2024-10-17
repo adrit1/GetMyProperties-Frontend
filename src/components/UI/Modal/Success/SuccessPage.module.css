@@ -20,11 +20,12 @@
     display: flex;
     flex-direction: column;
     justify-content: center;
+    align-items: center;
 }
 
 .gif {
-    height: 170px;
-    width: 170px;
+    height: 15rem;
+    width: 15rem;
 }
 
 .topHeading {

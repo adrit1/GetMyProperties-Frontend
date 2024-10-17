@@ -7,30 +7,31 @@ import 'swiper/css';
 import 'swiper/css/navigation';
 
 // Import required modules
-import { Autoplay, Navigation } from 'swiper/modules';
+import { Autoplay } from 'swiper/modules';
 
 import styles from './VideoBackground.module.css'; // Importing the modular CSS
 
 const ImageSlider = () => {
     return (
         <div className={styles.container}>
-            {/* Swiper with Image Scrolling */}
+
             <Swiper
-                slidesPerView={1} // Show 1 slide at a time (scroll the whole image)
-                spaceBetween={0} // No space between slides
-                centeredSlides={true} // Center the slide for smooth transition
+                slidesPerView={1}
+                spaceBetween={0}
+                centeredSlides={true}
                 autoplay={{
-                    delay: 2000,
+                    delay: 3000,
                     disableOnInteraction: false,
                 }}
-                // navigation={true} // Enable navigation arrows
+
                 modules={[Autoplay]}
                 className="mySwiper"
+
             >
-                {/* First slide containing the full image */}
+
                 <SwiperSlide>
                     <img
-                        src="/images/1.png" // Use absolute path for images in public folder
+                        src="/images/1.png"
                         style={{ width: '100%' }}
                         alt="properties"
                     />
